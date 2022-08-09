@@ -1,0 +1,55 @@
+<!--navbar-->
+<nav class="navbar navbar-expand-lg navbar-light">
+    <h4 class="py-2 px-2 mt-2"><i class="fa fa-check-square-o fs-2" aria-hidden="true"></i>
+        TRAINER APPROVAL</h4>
+</nav>
+
+<!--approvalform-->
+
+    <div class="container rounded  mt-3 mb-5 ">
+        <form (ngSubmit)="getApprove()">
+            <div class="row">
+                <div class="col-md-4 border-right">
+                    <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src ="{{path}}/{{trainerData.image}}"><h3 class="font-weight-bolder text-uppercase">{{trainerData.trainerName}}</h3></div>
+                </div>
+                <div class="col-md-5 border-right">
+                    <div class="p-3 py-5">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h4 class="text-right">TRAINER DETAILS</h4>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-12"><label class="labels">MOBILE NUMBER</label><input type="text" class="form-control" value="{{trainerData.phone}}"></div>
+                            <div class="col-md-12"><label class="labels">ADDRESS</label><input type="text" class="form-control" value="{{trainerData.address}}"></div>
+                            <div class="col-md-12"><label class="labels">EMAIL ID</label><input type="text" class="form-control" value="{{trainerData.email}}"></div>
+                            <div class="col-md-12"><label class="labels">QUALIFICATION</label><input type="text" class="form-control" value="{{trainerData.qualification}}"></div>
+                            <div class="col-md-12"><label class="labels">SKILL SET</label><input type="text" class="form-control" value="{{trainerData.skill}}"></div>
+                            <div class="col-md-12"><label class="labels">CURRENT COMPANYNAME</label><input type="text" class="form-control" value="{{trainerData.companyName}}"></div>
+                            <div class="col-md-12"><label class="labels">CURRENT DESIGNATION</label><input type="text" class="form-control" value="{{trainerData.designation}}"></div>
+                            <div class="col-md-12" id="formfield">
+                                <label class="labels py-2">COURSES</label>
+                                  <select [(ngModel)]="trainerData.course"  class="form-select" aria-label="course" value="course" name="course" required >
+                                    <option value="" selected disabled> Select Course</option>
+                                    <option *ngFor="let course of courses" [ngValue]="course"  >{{course}}</option>
+                                </select>
+                              </div>
+
+                            <div class="col-md-12" id="formfield">
+                                <label class="labels py-2">TYPE OF EMPLOYMENT</label>
+                                <select [(ngModel)]="trainerData.typeOfEmp" class="p-2" required  #emp="ngModel" [ngModelOptions]="{standalone: true}">
+                                    <option *ngFor="let emp of employment" [ngValue]="emp">
+                                    {{emp}}
+                                    </option>
+                              </select>
+                            </div>
+                        </div>
+                        <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="submit">APPROVE</button></div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        
+    </div>   
+
+
+
+

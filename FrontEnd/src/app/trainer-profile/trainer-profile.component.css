@@ -1,0 +1,114 @@
+/* Googlefont Poppins CDN Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.trainerhome{
+  min-height: 90vh;
+  padding-bottom: 40px;
+}
+nav .sidebar-button i{
+  font-size: 35px;
+  margin-right: 10px;
+}
+.container>.button:not(:last-child) {
+  margin-right: 10px;
+ }
+ #photo{
+ /* background-color: rgb(70, 155, 224);
+  width: 150px;
+  height: 50px;
+  border-radius: 1em;*/
+  display: flex;
+  justify-content: center;
+ align-items: center;
+ color: black;
+ left: 30%;
+ cursor: pointer;
+}
+     
+.custom{
+  margin-left: 14%;
+}
+      .title{
+        text-align: center;
+        font-size: x-large;
+       
+        color: #999;
+      }
+ 
+.content{
+    padding: 0px;
+    padding-top: 50px;
+}
+.first{
+    padding: 30px;
+    border: 2px solid white;
+    border-right: 0px;
+    text-align: center;
+    color: slategray;
+    background-color: rgba(209,214,220,255);
+
+}
+.second{
+    padding:10px;
+    border: 2px solid white;
+    border-left: 0px;
+    color: slategray;
+    background-color: rgba(209,214,220,255);
+
+ 
+
+}
+.f-style{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: medium;
+}
+@media only screen and (max-width: 575px) {
+    .forms {
+        border: 2px solid white;
+    }
+    .second{
+        border: 0px;
+    }
+    .first{
+        border: 0px;
+    }
+  }
+span{
+    width :65px;
+}
+
+.submit {
+    width: 120px;
+    height: 40px;
+    display: inline-block;
+    /* font-family: 'Poppins'; */
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    -ms-border-radius: 5px; }
+
+#submit {
+    background: #1161ee;
+    color: rgb(255, 252, 252);
+    margin-right: 25px; 
+    border: 2px solid #1161ee;
+  }
+    
+    #submit:hover {
+      border: 2px solid #1161ee;
+      background: white;
+      color: #1161ee; 
+    }

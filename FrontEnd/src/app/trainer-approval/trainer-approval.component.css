@@ -1,0 +1,22 @@
+
+.container .labels {
+    font-family: 'Montserrat',sans-serif;
+}
+
+.container{
+    background-color:rgba(245, 222, 179, 0.906);
+    width: 94%;
+}
+
+#formfield{
+    display:flex;
+    flex-direction: column;
+    border: none;
+}
+
+#outline{
+    background-color: white;
+    height: 33px;
+}
+
+  

@@ -1,0 +1,90 @@
+.header {
+  background-color:  rgba(199,202,255,255);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+}
+
+
+
+.nav .nav-item>a{
+  color: black;
+  font-family: 'Montserrat',sans-serif;
+  font-weight: bolder;
+}
+
+.fs-4{
+  color: #383CC1;
+}
+
+.content22{
+  margin-top: 10px;
+  margin-left: 16%;
+  width: 84%;
+  padding:10px
+}
+#sidebar{
+  background-image: url(../../assets/adminsidebar.jpg);        
+  background-size: cover;
+  background-position: top ;
+  position: fixed;
+}
+.sidebar{
+  width: 16%;
+  height: 90vh;
+
+}
+
+.itemdisplay{
+  background-color: rgba(199,202,255,255);
+  margin: 10px;
+  margin-top: 45px;
+  padding-bottom: 15px;
+}
+
+li{
+  padding-top: 10px;
+  font-size: 14px;
+
+}
+
+
+/* @media (max-width : 768px) {
+  #sidebar{
+    min-width:70px;
+  }
+  #list .spanitem{
+    display:none;
+  }
+   #navbarSupportedContent .nav-item>a{
+    padding-left: 30px;
+    font-size: 15px;
+    color: black;
+  } 
+  li{
+    font-size: 28px;
+  }
+} */
+
+@media (max-width : 1350px) {
+ .sidebar{
+    max-width:80px;
+  }
+  .spanitem{
+    display:none;
+  }
+  .content22{
+    width: 95%;
+    margin-left: 80px;
+
+  }
+  li{
+    font-size: 28px;
+    padding-left: 5px;
+  }
+
+
+
+}
+
+ 
+

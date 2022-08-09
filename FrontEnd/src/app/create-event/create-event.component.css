@@ -1,0 +1,19 @@
+.formdata{
+    width: 94%;
+}
+.form22{
+    background-color: rgba(245, 222, 179, 0.851);
+    margin-bottom: 35px;
+}
+.formdata .row .form-label{
+    font-weight: bold;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.formdata .row .btn{
+    border-radius: 25px;
+    background-color: #383CC1;
+}
+.formdata .row .text-center>span{
+    color: #B4161B;
+    font-weight: bold;
+}

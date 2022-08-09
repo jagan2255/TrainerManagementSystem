@@ -1,0 +1,81 @@
+<div class="trainerhome">
+
+    <div class="content">
+      <form (ngSubmit)="form.valid&&updatedata()" class="update-form"  #form="ngForm" >
+        <div class="row justify-content-center forms">
+            <div class="col-12 col-sm-6 col-md-5 first">
+
+                <div class="text-center mb-4">
+
+                  <img src="{{imagePath}}/{{trainer.image}}" alt="image" class="rounded-circle" name="image" id="image" height="150vh"  
+                  [style.width.px]='imageWidth'
+                  [style.margin.px]="imageMargin">
+
+                                 
+                </div>
+                <div class="textareas" style="color: grey; text-align: center;">
+                <strong><h3>{{trainer.trainerName}}</h3></strong>
+                </div>
+                
+
+                <textarea name="text" cols="40" rows="4" class="form-control" #about="ngModel" name="about" [(ngModel)]="trainer.about" required></textarea>
+                <small class="text-danger" *ngIf="form.submitted&&about.errors?.['required']">*About required</small>
+            </div>
+            <div class="col-12 col-sm-6 col-md-5 second">
+              <div class="mb-3 mt-1">
+                <label  class="form-label">Email</label>
+                <input type="text" class="form-control" #email="ngModel" disabled name="email" [(ngModel)]="trainer.email">
+              </div>
+              <div class="mb-3 mt-1"><div>
+                <label  class="form-label">Phone</label>
+                <input type="number" class="form-control"  name="phone" [(ngModel)]="trainer.phone" pattern="^[0-9]{10}$" maxlength="10" required #phone="ngModel">  
+                  </div>
+                  <small class="text-danger" *ngIf="form.submitted&&phone.errors?.['required']">*Phone Number required</small>
+                  <small class="text-danger" *ngIf="form.submitted&&phone.errors?.['pattern']">*Invalid Phone Number</small>
+                  <small class="text-danger" *ngIf="form.submitted&&phone.errors?.['maxlength']">*Phone number must be 10 digit</small>
+              </div>
+              <div class="mb-3 mt-1">
+                <label  class="form-label">Type</label>
+                <input type="text" class="form-control" #place="ngModel" disabled name="place" [(ngModel)]="trainer.typeOfEmp">
+                   </div>
+                <div class="mb-3 mt-1">
+                    <label  class="form-label">Address</label>
+                    <input type="string" class="form-control" #address="ngModel" name="address" [(ngModel)]="trainer.address" required>
+                    <small class="text-danger" *ngIf="form.submitted&&address.errors?.['required']">*Address required</small>
+                  </div>
+
+                  <div class="mb-3">
+                    <label  class="form-label">Qualification</label>
+                    <input type="string" class="form-control"  #address="ngModel" disabled name="qualification" [(ngModel)]="trainer.qualification">
+                  </div>
+
+                  <div class="mb-3">
+                    <label  class="form-label">Skills</label>
+                    <input type="string" class="form-control"  #address="ngModel" disabled name="skill" [(ngModel)]="trainer.skill">
+                  </div>
+
+
+                  <div class="mb-3">
+                    <label  class="form-label">Current Company</label>
+                    <input type="string" class="form-control"  #address="ngModel" disabled name="companyName" [(ngModel)]="trainer.companyName">
+                  </div>
+<!--
+                  <div class="mb-3">
+                    <label  class="form-label">Course Handling</label>
+                    <input type="string" class="form-control"  #address="ngModel" disabled name="course" [(ngModel)]="trainer.course">
+                  </div>
+                -->
+                  <div class="form-submit submitme text-center mt-5">
+             
+                    <button type="submit"  class="submit" id="submit" >Update</button>
+                   
+                
+                </div>
+                
+            </div>
+
+        </div>
+      </form>
+    </div>
+
+</div>

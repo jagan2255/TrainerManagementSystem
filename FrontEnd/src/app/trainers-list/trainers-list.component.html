@@ -1,0 +1,34 @@
+<!--navbar-->
+<nav class="navbar navbar-expand-lg navbar-light">
+    <h4 class="py-2 mt-2 px-2"><i class="fa fa-th-list fs-2" aria-hidden="true"></i>
+        TRAINERS LIST</h4>
+</nav>
+
+<!--table-->
+<table class="table table-hover table-secondary table-responsive ">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">EmailID</th>
+            <th scope="col">Type of employment</th>
+            <th scope="col">Course handling</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let trainer of trainerData" >
+            <td>{{trainer.trainerName}}</td>
+            <td>{{trainer.email}}</td>
+            <td>{{trainer.typeOfEmp}}</td>
+            <td>{{trainer.course}}</td>
+            <!-- <td>
+                <button class="btn btn-success" (click)="allocateRequest(trainer)">ALLOCATE</button>
+            </td> -->
+            <td>
+                <button class="btn btn-danger" (click)="removeTrainer(trainer)">REMOVE</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+

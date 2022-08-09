@@ -1,0 +1,35 @@
+<!--navbar-->
+<nav class="navbar navbar-expand-lg navbar-light">
+    <h4 class="px-2 py-2 mt-2"><i class=" fa fa-envelope-open fs-2"></i>
+        TRAINER REQUESTS</h4>
+</nav>
+
+<!--table-->
+<table class="table table-hover table-secondary table-responsive ">
+    <thead>
+        <tr>
+            <th scope="col">name</th>
+            <th scope="col">qualification</th>
+            <th scope="col">company name</th>
+            <th scope="col">designation</th>
+            <th scope="col">courses</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor=" let trainer of trainerData">
+            <td>{{trainer.trainerName}}</td>
+            <td>{{trainer.qualification}}</td>
+            <td>{{trainer.companyName}}</td>
+            <td>{{trainer.designation}}</td>
+            <td>{{trainer.course}}</td>
+            <td>
+                <button class="btn btn-success"(click)="approveRequest(trainer)">APPROVE</button>
+            </td>
+            <td>
+                <button class="btn btn-danger"(click)="rejectTrainer(trainer)" >REJECT</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

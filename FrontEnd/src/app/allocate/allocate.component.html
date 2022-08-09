@@ -1,0 +1,124 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+    <i class="fa fa-th-list px-2 fs-2" aria-hidden="true"></i>
+    <h4 class="py-2 mt-2">ALLOCATION OF TRAINERS</h4>
+</nav>
+
+<div class="d-flex justify-content-center">
+    <div class="formdata">
+        <form class="p-5" (ngSubmit)="allocatedData()">
+
+            <div>
+                <div class="row justify-content-around">
+
+                    <div class="col-11 col-md-5 mb-4 ">
+                        <label class="form-label">Trainer</label>
+                        <input type="text" class="form-control" value="{{trainerData.trainerName}}">
+                    </div>
+                    <div class="col-11 col-md-5 mb-4 ">
+                        <label class="form-label">Email address</label>
+                        <input type="email" class="form-control" value="{{trainerData.email}}">
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-around">
+
+                    <div class="col-11 col-md-5 mb-4 mx-3">
+                        <label class="form-label">Phone</label>
+                        <input type="text" class="form-control" value="{{trainerData.phone}}">
+                    </div>
+                    <div class="col-11 col-md-5 mb-4 mx-3">
+                        <label class="form-label">Type Of Employment</label>
+                        <input type="text" class="form-control" value="{{trainerData.typeOfEmp}}">
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-around">
+
+                    <div class="col-11 col-md-5 mb-4 mx-3">
+                        <label class="form-label">Qualification</label>
+                        <input type="text" class="form-control" value="{{trainerData.qualification}}">
+                    </div>
+                    <div class="col-11 col-md-5 mb-4 mx-3">
+                        <label class="form-label">Course</label>
+                        <input type="text" class="form-control" value="{{trainerData.course}}">
+                    </div>
+
+                </div>
+                
+                <div class="row justify-content-around">
+
+                    <div class="col-11 col-md-5 mb-4 mx-3">
+                        <label class="form-label">Company Name</label>
+                        <input type="text" class="form-control" value="{{trainerData.companyName}}">
+                    </div>
+                    <div class="col-11 col-md-5 mb-4 mx-3">
+                        <label class="form-label">Designation</label>
+                        <input type="text" class="form-control" value="{{trainerData.designation}}">
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-around">
+
+                    <div class="col-11 col-md-5 mb-4 mx-3">
+                        <label class="form-label">Start Date</label>
+                        <input type="date" class="form-control" [(ngModel)]="trainerData.startDate" name="startDate">
+                    </div>
+                    <div class="col-11 col-md-5 mb-4 mx-3">
+                        <label class="form-label">End Date</label>
+                        <input type="date" class="form-control" [(ngModel)]="trainerData.endDate" name="endDate">
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-around">
+                    <div class="col-11 col-md-5 mb-4 mx-3">
+                        <label class="form-label">Batch ID</label>
+                        <select class="form-select" aria-label="Default select example" value="select" required [(ngModel)]="trainerData.batchId" name="batchId">
+                            <option *ngFor="let batchid of batchIds" required>{{batchid}}</option>
+                        </select>
+                    </div>
+                    <div class="col-11 col-md-5 mb-4 mx-3">
+                        <label class="form-label">Course ID</label>
+                        <select class="form-select" aria-label="Default select example" value="select" required [(ngModel)]="trainerData.courseId" name="courseId">
+                            <option  *ngFor="let courseid of courseIds" required>{{courseid}}</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-around">
+
+                    <div class="col-11 col-md-5 mb-4 mx-3">
+                        <label class="form-label">Time from</label>
+                        <input type="time" class="form-control" [(ngModel)]="trainerData.fromTime" name="time">
+                    </div>
+                    
+                    <div class="col-11 col-md-5 mb-4 mx-3">
+                        <label class="form-label">Time to</label>
+                        <input type="time" class="form-control" [(ngModel)]="trainerData.toTime" name="time">
+                    </div>
+
+                </div>
+                 <div class="row justify-content-around">
+                    <div class="text-center mt-5">
+                        <button class="btn btn-primary profile-button" type="submit">check availability</button>
+                    </div>
+                    <div class="col-11 col-md-5 mb-4 mx-3">
+                        <label class="form-label">Meeting Link</label>
+                        <input type="text" class="form-control" [(ngModel)]="trainerData.meetingLink" name="meetingLink">
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <button class="btn btn-primary profile-button" type="submit">ALLOCATE</button>
+            </div>
+
+        </form>
+    </div>
+
+</div>
